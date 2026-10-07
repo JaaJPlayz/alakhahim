@@ -1,6 +1,11 @@
-#include <stdio.h>
+#include <ncurses.h>
+#include <panel.h>
 
 int main(int argc, char *argv[]) {
-  printf("Hello world");
+  initscr();
+  printw("Hello, world");
+  refresh();
+  getch();
+  endwin();
   return 0;
 }
